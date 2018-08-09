@@ -1,0 +1,27 @@
+branch-defaults:
+  beanstalk:
+    environment: nkrawsoncreations
+  develop:
+    environment: Nkrawsoncreations-env-1
+    group_suffix: null
+environment-defaults:
+  DemoApplication-env-1:
+    branch: null
+    repository: null
+  Nkrawsoncreations-env-1:
+    branch: null
+    repository: null
+global:
+  application_name: NKRawsonCreations
+  branch: null
+  default_ec2_keyname: key
+  default_platform: Ruby 2.4 (Puma)
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: git
+  workspace_type: Application

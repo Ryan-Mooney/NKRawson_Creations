@@ -1,0 +1,227 @@
+============= i-0dd9fb5ca62916416 ==============
+-------------------------------------
+/var/log/nginx/error.log
+-------------------------------------
+2018/08/07 04:43:26 [warn] 2507#0: conflicting server name "localhost" on 0.0.0.0:80, ignored
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+  source 'https://rubygems.org'
+  git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+  
+  ruby '2.4.1'
+  
+  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+  gem 'rails', '~> 5.2.0'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  # Use SCSS for stylesheets
+  gem 'sass-rails', '~> 5.0'
+  # Use Uglifier as compressor for JavaScript assets
+  gem 'uglifier', '>= 1.3.0'
+  # See https://github.com/rails/execjs#readme for more supported runtimes
+  # gem 'mini_racer', platforms: :ruby
+  
+  # Use CoffeeScript for .coffee assets and views
+  gem 'coffee-rails', '~> 4.2'
+  # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+  gem 'turbolinks', '~> 5'
+  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+  gem 'jbuilder', '~> 2.5'
+  # Use Redis adapter to run Action Cable in production
+  # gem 'redis', '~> 4.0'
+  # Use ActiveModel has_secure_password
+  # gem 'bcrypt', '~> 3.1.7'
+  
+  # Use ActiveStorage variant
+  # gem 'mini_magick', '~> 4.8'
+  
+  # Use Capistrano for deployment
+  # gem 'capistrano-rails', group: :development
+  
+  # Reduces boot times through caching; required in config/boot.rb
+  gem 'bootsnap', '>= 1.1.0', require: false
+  
+  # Add bootstrap gem
+  gem 'bootstrap-sass', '3.3.7'
+  
+  #Use font awesome sass gem for adding icons
+  gem 'font-awesome-sass', '4.6.2'
+  
+  #Use hirb for better console database display
+  gem 'hirb', '0.7.3'
+  
+  group :development, :test do
+    #Use sqlite3 as the database for Active Record
+    gem 'sqlite3'
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+    gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  end
+  
+  group :development do
+    # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+    gem 'web-console', '>= 3.3.0'
+    gem 'listen', '>= 3.0.5', '< 3.2'
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
+    gem 'spring-watcher-listen', '~> 2.0.0'
+  end
+  
+  group :test do
+    # Adds support for Capybara system testing and selenium driver
+    gem 'capybara', '>= 2.15', '< 4.0'
+    gem 'selenium-webdriver'
+    # Easy installation and use of chromedriver to run system tests with Chrome
+    gem 'chromedriver-helper'
+  end
+  
+  group :production do
+    #Use the PostgreSQL gem for Heroku production servers
+   # gem 'pg', '~> 0.20'
+   # Use Puma as the app server
+    gem 'puma', '~> 3.11'
+  end
+  
+  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  + '[' -d /var/app/ondeck/vendor/cache ']'
+  + bundle install
+  Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+  installing your bundle as root will break this application for all non-root
+  users on this machine.
+  Your Gemfile lists the gem sqlite3 (>= 0) more than once.
+  You should probably keep only one of them.
+  While it's not a problem now, it could cause errors if you change the version of one of them later.
+  Warning: the running version of Bundler (1.16.1) is older than the version that created the lockfile (1.16.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+  Your Ruby version is 2.4.4, but your Gemfile specified 2.4.1 (Executor::NonZeroExitStatus)
+
+
+[2018-08-07T04:59:04.996Z] INFO  [24108] - [Application update project11@9/AppDeployStage0/AppDeployPreHook/10_bundle_install.sh] : Activity failed.
+[2018-08-07T04:59:04.996Z] INFO  [24108] - [Application update project11@9/AppDeployStage0/AppDeployPreHook] : Activity failed.
+[2018-08-07T04:59:04.996Z] INFO  [24108] - [Application update project11@9/AppDeployStage0] : Activity failed.
+[2018-08-07T04:59:04.997Z] INFO  [24108] - [Application update project11@9] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy failed
+[2018-08-07T05:03:28.833Z] INFO  [26900] - [CMD-TailLogs] : Starting activity...
+[2018-08-07T05:03:28.834Z] INFO  [26900] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2018-08-07T05:03:28.834Z] INFO  [26900] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2018-08-07T05:03:28.834Z] INFO  [26900] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2018-08-07T05:03:28.835Z] INFO  [26900] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/nginx/access.log
+-------------------------------------
+
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+  gem 'turbolinks', '~> 5'
+  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+  gem 'jbuilder', '~> 2.5'
+  # Use Redis adapter to run Action Cable in production
+  # gem 'redis', '~> 4.0'
+  # Use ActiveModel has_secure_password
+  # gem 'bcrypt', '~> 3.1.7'
+  
+  # Use ActiveStorage variant
+  # gem 'mini_magick', '~> 4.8'
+  
+  # Use Capistrano for deployment
+  # gem 'capistrano-rails', group: :development
+  
+  # Reduces boot times through caching; required in config/boot.rb
+  gem 'bootsnap', '>= 1.1.0', require: false
+  
+  # Add bootstrap gem
+  gem 'bootstrap-sass', '3.3.7'
+  
+  #Use font awesome sass gem for adding icons
+  gem 'font-awesome-sass', '4.6.2'
+  
+  #Use hirb for better console database display
+  gem 'hirb', '0.7.3'
+  
+  group :development, :test do
+    #Use sqlite3 as the database for Active Record
+    gem 'sqlite3'
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+    gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  end
+  
+  group :development do
+    # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+    gem 'web-console', '>= 3.3.0'
+    gem 'listen', '>= 3.0.5', '< 3.2'
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
+    gem 'spring-watcher-listen', '~> 2.0.0'
+  end
+  
+  group :test do
+    # Adds support for Capybara system testing and selenium driver
+    gem 'capybara', '>= 2.15', '< 4.0'
+    gem 'selenium-webdriver'
+    # Easy installation and use of chromedriver to run system tests with Chrome
+    gem 'chromedriver-helper'
+  end
+  
+  group :production do
+    #Use the PostgreSQL gem for Heroku production servers
+   # gem 'pg', '~> 0.20'
+   # Use Puma as the app server
+    gem 'puma', '~> 3.11'
+  end
+  
+  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+  + '[' -d /var/app/ondeck/vendor/cache ']'
+  + bundle install
+  Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+  installing your bundle as root will break this application for all non-root
+  users on this machine.
+  Your Gemfile lists the gem sqlite3 (>= 0) more than once.
+  You should probably keep only one of them.
+  While it's not a problem now, it could cause errors if you change the version of one of them later.
+  Warning: the running version of Bundler (1.16.1) is older than the version that created the lockfile (1.16.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+  Your Ruby version is 2.4.4, but your Gemfile specified 2.4.1 (Executor::NonZeroExitStatus)
+
+
+[2018-08-07T04:59:04.997Z] ERROR [24108] : Command CMD-AppDeploy failed!
+[2018-08-07T04:59:04.997Z] INFO  [24108] : Command processor returning results: 
+{"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"(TRUNCATED)...g: the running version of Bundler (1.16.1) is older than the version that created the lockfile (1.16.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.\nYour Ruby version is 2.4.4, but your Gemfile specified 2.4.1. \nHook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI","returncode":18,"events":[]}],"truncated":"true"}
+[2018-08-07T05:03:28.462Z] DEBUG [26900] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2018-08-07T05:03:28.462Z] DEBUG [26900] : Checking if the command processor should execute...
+[2018-08-07T05:03:28.471Z] DEBUG [26900] : Checking whether the command is applicable to instance (i-0dd9fb5ca62916416)..
+[2018-08-07T05:03:28.471Z] INFO  [26900] : Command is applicable to this instance (i-0dd9fb5ca62916416)..
+[2018-08-07T05:03:28.471Z] DEBUG [26900] : Checking if the received command stage is valid..
+[2018-08-07T05:03:28.471Z] INFO  [26900] : No stage_num in command. Valid stage..
+[2018-08-07T05:03:28.471Z] INFO  [26900] : Received command CMD-TailLogs: {"execution_data"=>"*", "instance_ids"=>["i-0dd9fb5ca62916416"], "data"=>"78ff3677-494e-4128-ac4c-6ebbca481f1d", "command_name"=>"CMD-TailLogs", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"78ff3677-494e-4128-ac4c-6ebbca481f1d"}
+[2018-08-07T05:03:28.471Z] INFO  [26900] : Command processor should execute command.
+[2018-08-07T05:03:28.471Z] DEBUG [26900] : Storing current stage..
+[2018-08-07T05:03:28.471Z] DEBUG [26900] : Stage_num does not exist. Not saving null stage. Returning..
+[2018-08-07T05:03:28.471Z] DEBUG [26900] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2018-08-07T05:03:28.472Z] DEBUG [26900] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2018-08-07T05:03:28.713Z] DEBUG [26900] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2018-08-07T05:03:28.718Z] INFO  [26900] : Found enabled addons: ["logstreaming", "logpublish"].
+[2018-08-07T05:03:28.721Z] INFO  [26900] : Updating Command definition of addon logstreaming.
+[2018-08-07T05:03:28.721Z] INFO  [26900] : Updating Command definition of addon logpublish.
+[2018-08-07T05:03:28.721Z] DEBUG [26900] : Loaded definition of Command CMD-TailLogs.
+[2018-08-07T05:03:28.721Z] INFO  [26900] : Executing CMD-TailLogs
+[2018-08-07T05:03:28.834Z] INFO  [26900] : Executing command: CMD-TailLogs...
+[2018-08-07T05:03:28.834Z] INFO  [26900] : Executing command CMD-TailLogs activities...
+[2018-08-07T05:03:28.834Z] DEBUG [26900] : Setting environment variables..
+[2018-08-07T05:03:28.834Z] INFO  [26900] : Running AddonsBefore for command CMD-TailLogs...
+[2018-08-07T05:03:28.834Z] DEBUG [26900] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2018-08-07T05:03:28.834Z] INFO  [26900] : Running stage 0 of command CMD-TailLogs...
+[2018-08-07T05:03:28.834Z] DEBUG [26900] : Loaded 1 actions for stage 0.
+[2018-08-07T05:03:28.834Z] INFO  [26900] : Running 1 of 1 actions: TailLogs...
+
+
+
