@@ -68,8 +68,8 @@ group :test do
 end
 
 group :production do
-  #Use the PostgreSQL gem for Heroku production servers
- gem 'pg', '~> 0.20'
+  #Use the PostgreSQL gem for production servers
+ gem 'pg'
  # Use Puma as the app server
   gem 'puma', '~> 3.11'
 end

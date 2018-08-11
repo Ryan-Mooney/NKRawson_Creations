@@ -31,7 +31,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -68,4 +68,16 @@ Rails.application.configure do
     :user_name => "postmaster@sandbox0a8b787e4ffd4190bc8da03ef5cfce31.mailgun.org",
     :password => "442bbbe79b36285edeb5eb6394771bd7-7efe8d73-1fc84ce6"
 }
+
+ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'shrouded-fortress-66409.herokuapp.com',
+  :authentication => :plain,
+}
+
+config.action_mailer.default_url_options - { host: "localhost:3000" }
+
 end
