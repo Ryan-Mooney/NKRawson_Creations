@@ -60,15 +60,27 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #Sets up configurations to use mailgun
-ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'],
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'sandbox0a8b787e4ffd4190bc8da03ef5cfce31.mailgun.org',
-  :authentication => :plain,
-}
+ # ActionMailer::Base.smtp_settings = {
+#	:port           => :587,
+#	:address        => 'smtp.gmail.com',
+#	:user_name      => 'mooneyryanj',
+#	:password       => '422moondawgx',
+#	:domain         => 'example.com',
+#	:authentication => :plain,
+#	:enable_starttls_auto => :true,
+#	}
 
-config.action_mailer.default_url_options - { host: "localhost:3000" }
+	config.action_mailer.delivery_method = :smtp
+	config.action_mailer.smtp_settings = {
+	  :authentication => :plain,
+	  :address => "smtp.gmail.org",
+	  :port => 587,
+	  :domain => "gmail.com",
+	  :user_name => "mooneyryanj@gmail.com",
+	  :password => "Moondawg422!",
+	  :enable_starttls_auto => true
+	}
+	
+	config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
 end

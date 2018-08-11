@@ -6,5 +6,7 @@ class ContactMailer < ActionMailer::Base
       @email = email
       @body=body
       mail(from: email, subject: 'Contact Form Message')
+	  mail to: 'mooneyryanj@gmail.com',
+		subject: 'Contact Form Message from @name'
    end
 end
