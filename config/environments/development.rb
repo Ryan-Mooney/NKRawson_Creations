@@ -31,7 +31,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
@@ -60,28 +60,12 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #Sets up configurations to use mailgun
- # ActionMailer::Base.smtp_settings = {
-#	:port           => :587,
-#	:address        => 'smtp.gmail.com',
-#	:user_name      => 'mooneyryanj',
-#	:password       => '422moondawgx',
-#	:domain         => 'example.com',
-#	:authentication => :plain,
-#	:enable_starttls_auto => :true,
-#	}
-
-	config.action_mailer.delivery_method = :smtp
-	config.action_mailer.smtp_settings = {
-	  :authentication => :plain,
-	  :address => "smtp.mailgun.org",
-	  :port => 587,
-	  :user_name => "username",
-	  :password => "password",
-	  :enable_starttls_auto => true,
-	  :host => 'localhost:3000',
-	  :domain => 'domain.mailgun.org'
-	}
-	
-	config.action_mailer.default_url_options = { :host => "localhost:3000" }
-
+  ActionMailer::Base.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox0a8b787e4ffd4190bc8da03ef5cfce31.mailgun.org",
+    :user_name => "postmaster@sandbox0a8b787e4ffd4190bc8da03ef5cfce31.mailgun.org",
+    :password => "442bbbe79b36285edeb5eb6394771bd7-7efe8d73-1fc84ce6"
+}
 end

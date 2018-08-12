@@ -5,8 +5,12 @@ ruby '2.4.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -39,11 +43,6 @@ gem 'font-awesome-sass', '4.6.2'
 #Use hirb for better console database display
 gem 'hirb', '0.7.3'
 
-# Use Uglifier as compressor for JavaScript assets
-group :assets do
-	gem 'uglifier'
-end
-
 group :development, :test do
   #Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -69,14 +68,11 @@ group :test do
 end
 
 group :production do
-  #Use the PostgreSQL gem for production servers
- gem 'pg'
+  #Use the PostgreSQL gem for Heroku production servers
+ gem 'pg', '~> 0.20'
  # Use Puma as the app server
   gem 'puma', '~> 3.11'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# For use with mailer to avoid polling for changes
-gem 'wdm', '>= 0.1.0'
