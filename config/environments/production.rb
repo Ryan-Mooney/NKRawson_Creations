@@ -92,21 +92,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #Settings for mailgun
-    ActionMailer::Base.delivery_method = :smtp
-
-    #host = ENV["APP_HOST_NAME"]
-
-	ActionMailer::Base.smtp_settings = { 
-		port: ENV['SMTP_PORT'],
-		address: ENV['SMTP_SERVICENAME'],
-		user_name: ENV['SMTP_USERNAME'],
-		password: ENV['SMTP_PASSWORD'],
-		domain: host,
-		authentication: :plain,
-	}   
-	#specify default URL for links that are sent in the emails (i.e confirmation email)
-    #config.action_mailer.default_url_options = { 
-    #host: host
-    #}
+  #Mailgun action-mailer settings
+  ActionMailer::Base.smtp_settings = {
+	:authentication => :plain,
+    :address =>		ENV['SMTP_SERVICENAME'],
+    :port =>		ENV['SMTP_PORT'],
+    :domain =>		ENV['SMTP_DOMAIN'],
+    :user_name =>	ENV['SMTP_USERNAME'],
+    :password =>	ENV['SMTP_PASSORD']
+  }
 end
