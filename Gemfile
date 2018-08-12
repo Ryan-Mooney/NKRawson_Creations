@@ -79,4 +79,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # For use with mailer to avoid polling for changes
-#gem 'wdm', '>= 0.1.0'
+gem 'wdm', '>= 0.1.0'
