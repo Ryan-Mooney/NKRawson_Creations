@@ -5,12 +5,8 @@ ruby '2.4.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -42,6 +38,11 @@ gem 'font-awesome-sass', '4.6.2'
 
 #Use hirb for better console database display
 gem 'hirb', '0.7.3'
+
+# Use Uglifier as compressor for JavaScript assets
+group :assets do
+	gem 'uglifier'
+end
 
 group :development, :test do
   #Use sqlite3 as the database for Active Record

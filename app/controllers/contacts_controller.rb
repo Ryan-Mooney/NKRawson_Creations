@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
             name = params[:contact][:name]
             email=params[:contact][:email]
             body=params[:contact][:comments]
-            ContactMailer.contact_email(name, email, body).deliver
+            CommentMailer.new_comment(name, email, body).deliver
             #Lets user know the email was sent
             flash[:success]="Message sent."
             redirect_to "/contact-us"

@@ -231,7 +231,7 @@ DEPENDENCIES
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier
   wdm (>= 0.1.0)
   web-console (>= 3.3.0)
 
