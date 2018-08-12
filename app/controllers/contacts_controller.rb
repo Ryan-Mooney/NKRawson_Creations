@@ -1,15 +1,20 @@
 class ContactsController < ApplicationController
+    #GET request to /contact-us, Show new contact form
     def new
         @contact = Contact.new
     end
     
+    #POST request from /contacts
     def create 
+        #Mass assignment of form fields into contact object
         @contact=Contact.new(contact_params)
+        #Save the contact object to the database
         if @contact.save
-            #Sends an email to admin about a new comment
+            #Stores form fields into parameters
             name = params[:contact][:name]
             email=params[:contact][:email]
             body=params[:contact][:comments]
+            #Sends an email to admin about a new comment
             ContactMailer.contact_email(name, email, body).deliver
             #Lets user know the email was sent
             flash[:success]="Message sent."
@@ -22,7 +27,9 @@ class ContactsController < ApplicationController
     end
     
     private
-    def contact_params
-        params.require(:contact).permit(:name, :email, :comments)
-    end
+        #To collect data from form, we need to use strong parameters
+        #and whitelist the form fields
+        def contact_params
+            params.require(:contact).permit(:name, :email, :comments)
+        end
 end

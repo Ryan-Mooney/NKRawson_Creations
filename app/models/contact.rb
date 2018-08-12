@@ -1,4 +1,5 @@
 class Contact<ActiveRecord::Base
+    #Contact form validations
     @contact
     validates :name, presence: { message: 'Name must be given' }
     validates :email, presence: { message: "Email must be given" }
