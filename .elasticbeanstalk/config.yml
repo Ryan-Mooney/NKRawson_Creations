@@ -4,13 +4,8 @@ branch-defaults:
   develop:
     environment: Nkrawsoncreations-env-1
     group_suffix: null
-  master:
-    environment: NKrawsonCreations
 environment-defaults:
   DemoApplication-env-1:
-    branch: null
-    repository: null
-  NKrawsonCreations:
     branch: null
     repository: null
   Nkrawsoncreations-env-1:
